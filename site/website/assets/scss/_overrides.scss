@@ -1,0 +1,207 @@
+.wow {
+    visibility: hidden;
+}
+
+.slick-arrow {
+    display: none !important;
+}
+
+.slick-dots {
+    text-align: left !important;
+    margin-top: 10px;
+    display: none !important;
+    li {
+        background-color: $gray-dark;
+        transition: background-color 0.3s ease;
+        border-radius: 50%;
+        color: transparent;
+        width: 10px !important;
+        height: 10px !important;
+        display: inline-block;
+        margin-right: 5px;
+        button {
+            width: 10px !important;
+            height: 10px !important;
+            &:before,
+            &:after {
+                content: '' !important;
+                color: transparent;
+            }
+        }
+        &:hover {
+            background-color: darken($gray-dark, 20);
+        }
+        &.slick-active {
+            background-color: $clr-accent;
+        }
+    }
+}
+
+
+/* fullpage js */
+
+#fp-nav {
+    transform: translate(0, -50%);
+    margin-top: 0 !important;
+}
+
+#fp-nav.right {
+    right: 60px;
+}
+
+#fp-nav ul,
+.fp-slidesNav ul {
+    margin: 0;
+    padding: 0
+}
+
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    position: relative
+}
+
+.fp-slidesNav ul li {
+    display: inline-block
+}
+
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none
+}
+
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    width: 27px;
+    height: 2px;
+    margin: 0;
+    border-radius: 0;
+    background: $black;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    width: 20px;
+    height: 2px;
+    border-radius: 0;
+    background: $gray-dark;
+    left: auto;
+    top: 50%;
+    right: -10px;
+    margin: 0;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    &:focus {
+        outline: 0;
+    }
+}
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
+    width: 22px;
+    height: 2px;
+    margin: 0;
+    background-color: $gray-darker;
+}
+
+// Custom Scrollbar
+.mCSB_scrollTools {
+    margin: 0 !important;
+    margin-right: 52px !important;
+    .site-content & {
+        margin: 60px 52px 60px 0 !important
+    }
+}
+
+.mCSB_dragger_bar {
+    width: 1px !important;
+    background: #000 !important;
+    @include transition;
+    @include iconfont('arrow', after) {
+        font-size: 10px;
+        // margin-left: 5px;
+        display: block;
+        transform: rotate(90deg) translate(-49px, -5px);
+        color: $clr-accent;
+        position: relative;
+        top: 100%;
+        left: 5px;
+    }
+    &:after {
+        @include transition;
+    }
+    &:hover {
+        background: $clr-pri !important;
+        &:after {
+            color: $clr-pri;
+        }
+    }
+}
+
+.mCSB_scrollTools_onDrag {
+    .mCSB_dragger_bar {
+        background: $clr-pri !important;
+        &:after {
+            color: $clr-pri;
+        }
+    }
+}
+
+
+/* mailchimp */
+
+#mc_embed_signup div.mce_inline_error {
+    background-color: $clr-accent !important;
+}
+
+#mce-success-response {
+    position: absolute;
+    top: -10px;
+}
+
+#mc_embed_signup div.mce_inline_error {
+    position: absolute;
+    width: 100%;
+}
+
+
+/* contact form 7 */
+
+.wpcf7-response-output,
+.wpcf7-display-none,
+.wpcf7-validation-errors {
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    border: none !important;
+    font-size: 12px !important;
+}
+
+.ajax-loader {
+    visibility: hidden !important;
+}
+
+span.wpcf7-not-valid-tip {
+    color: #fff;
+    display: block;
+    background: #000;
+    padding: 5px;
+    position: absolute;
+    width: 200px;
+}

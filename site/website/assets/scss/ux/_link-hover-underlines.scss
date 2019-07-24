@@ -1,0 +1,134 @@
+/* add a empty string after the elment with class .slide-left-right */
+
+
+/* Change the width and background on hover, aka sliding out */
+
+.slide-left-right {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    &:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 0;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+        /* .5 seonds for changes to the width and background-color */
+        -webkit-transition: width .5s ease, background-color .5s ease;
+        /* Chrome and Safari */
+        -moz-transition: width .5s ease, background-color .5s ease;
+        /* FireFox */
+    }
+    &:hover:after {
+        width: 100%;
+        background: black;
+    }
+}
+
+.slide-right-left {
+    text-decoration: none;
+    display: inline-block;
+    color: green;
+    position: relative;
+    /* prepare for sliding from right to left */
+    &:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 0;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+        -webkit-transition: width .5s ease, background-color .5s ease;
+        -moz-transition: width .5s ease, background-color .5s ease;
+        /* position the content to the right bottom corner of the parent element to make it slide from right to left on hover */
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &:hover:after {
+        width: 100%;
+        background: green;
+    }
+}
+
+.slide-center-out {
+    text-decoration: none;
+    display: inline-block;
+    &:after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 0;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+        -webkit-transition: width .5s ease, background-color .5s ease;
+        -moz-transition: width .5s ease, background-color .5s ease;
+        margin: auto;
+        /* center the cotent so it will sliding from the midddle to the left and right */
+    }
+    &:hover:after {
+        width: 100%;
+        background: $clr-pri;
+    }
+}
+
+.slide-in-out {
+    text-decoration: none;
+    color: brown;
+    display: inline-block;
+    position: relative;
+    /* prepare the position for sliding in and out */
+    &:before {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 0;
+        transition: width 0s ease, background-color .5s ease;
+        -webkit-transition: width 0s ease, background-color .5s ease;
+        -moz-transition: width 0s ease, background-color .5s ease;
+        /* position the content to the left bottom corner of the parent element to make it to slide in from left to right on hover */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    &:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 0;
+        background: brown;
+        transition: width .5s ease;
+        -webkit-transition: width .5s ease, background-color .5s ease;
+        -moz-transition: width .5s ease, background-color .5s ease;
+        /* position the content to the left bottom corner of the parent element to make it to slide out from left to right on hover */
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &:hover {
+        &:before {
+            width: 100%;
+            background: brown;
+            transition: width .5s ease;
+            -webkit-transition: width .5s ease;
+            -moz-transition: width .5s ease;
+        }
+        &:after {
+            width: 100%;
+            background: transparent;
+            transition: all 0s ease;
+            -webkit-transition: width 0s ease;
+            -moz-transition: width .0s ease;
+        }
+    }
+}
+
+
+/* add a empty string before the elment with class .slide-in-out  */
+
+
+/* add a empty string after the elment with class .slide-in-out  */
+
+
+/* Change the width and background on hover, aka sliding in and out */

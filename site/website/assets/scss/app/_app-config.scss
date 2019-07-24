@@ -1,0 +1,140 @@
+// Z-Indexes
+$z-root                           : -10;     // throw backwards
+$z-base                           : 10;      // base default of each section
+$z-stem                           : 100;     // first layer in all sections
+$z-sky                            : 1000;    // second layer inter sections
+$z-space                          : 10000;   // top most layer of website (less used)
+
+// App configuration file. Usually contains variables that are not theme related.
+$susy                             : (
+columns                           : 12,
+container                         : 90%,
+gutters                           : 0.25,
+gutter-position                   : inside
+  );
+// debug                          : (image: show-columns)
+// layout
+$wide                             : (
+columns                           : 24,
+container                         : 100%,
+gutters                           : 0.25,
+gutter-position                   : inside,
+debug                             : (image: show-columns)
+  );
+// Same results                   :
+// @include layout(24 0.25 100% float inside)
+// $wide                          : layout(24 0.25 100% float inside)
+
+@include breakpoint-set('default feature', max-width); 
+// $breakpoint-default-pair       : height; // default is width
+// // $breakpoint-to-ems          : true; // default is width
+$BREAKPOINTS                      : (
+'iphone5'                         : (320px, 'no-query' true),
+'mobiles'                         : (480px, 'no-query' true),
+'tablets'                         : (768px, 'no-query' true),
+'tablets-landscape'               : (1024px, 'no-query' true),
+'old-tablets'                     : (992px, 'no-query' true),
+'desktop-standard'                         : (1024px, 'no-query' true),
+'desktop'                         : (1200px, 'no-query' true),
+'large'                           : (1920px, 'no-query' true),
+'retina'                          : min-resolution 1.5dppx,
+'touch'                           : (pointer coarse, 'no-query' '.touch'),
+);
+// $breakpoint-no-query-fallbacks : '.touch';
+
+// Typography
+@import url('https                : //fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i|Lato:400,700');
+// @import url('https             : //fonts.googleapis.com/css?family=Lato');
+
+%font-pri {
+font-family                       : $font-pri;
+font-weight                       : 900;
+}
+
+%font-sec {
+font-family                       : $font-sec;
+font-weight                       : 400;
+
+}
+%font-sec--italic {
+font-family                       : $font-sec;
+font-weight                       : 400;
+font-style                        : italic;
+}
+%font-sec--light-italic {
+font-family                       : $font-sec;
+font-weight                       : 300;
+font-style                        : italic;
+}
+
+%font-ter {
+font-family                       : 'Lato';
+font-weight                       : 300;
+}
+
+%font-ter--bold {
+font-family                       : 'Lato';
+}
+
+// default variables
+// 
+// grays
+$gray-lighter                     : #f5f5f5;
+$gray-light                       : #f1f1f1;
+$gray                             : #a6a6a6;
+$gray-dark                        : #666666;
+$gray-darker                      : #333333;
+
+// colors
+$clr-light                        : #ffffff;
+$clr-red                          : #e31e2d;
+
+$black-text                       : #666;
+
+// corporate colors
+$clr-pri                          : #f37121;
+$clr-sec                          : $gray; // grayish
+$clr-pri-light                    : #f37222;
+
+$clr-accent                       : #000000;
+
+// backgrounds
+$bg-body                          : $clr-light;
+$header-bg                        : #fbf2ed;
+// fonts
+$font-pri-type                    : $sans-serif;
+$font-sec-type                    : $serif;
+
+$font-pri                         : 'Avenir', $sans-serif;
+$font-sec                         : 'Cormorant Garamond', $serif;
+$font-ter                         : 'Nexa-LightRegular', $sans-serif;
+$font-roboto					  : 'Roboto', sans-serif;
+
+// paths
+$path-images                      : "../images";
+
+// grid
+
+$gap                              : 70px;
+$tabs-margin                      : 30px;
+
+// borders
+$border-radius                    : 0;
+$border                           : 1px solid $gray-light;
+$border-gray                      : 1px solid $gray-light;
+$border-dark                      : 1px solid $clr-sec;
+
+$fb-color                         : #3b5998;
+$twitter-color                    : #1da1f2;
+$linkedin-color                   : #0077b5;
+
+// Transition                     :
+
+$transition                       : all 0.2s cubic-bezier(0.87, 0.275, 0.225, 0.765);
+$default-tr-property              : all;
+$default-tr-duration              : 0.5s;
+$default-tr-function              : ease;
+$default-tr-delay                 : 0;
+
+$transition-function              : cubic-bezier(0.87, 0.275, 0.225, 0.765);
+$zindex                           : 100;

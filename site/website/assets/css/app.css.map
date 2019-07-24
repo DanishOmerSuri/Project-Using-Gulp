@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.scss"],"names":[],"mappings":"AAAA,2BAGG,cAAe,CACf","file":"app.css","sourcesContent":[".section {\r\n\t.inner-section {\r\n\t\th1 {\r\n\t\t\tfont-size: 12px;\r\n\t\t}\r\n\t}\r\n}"]}
